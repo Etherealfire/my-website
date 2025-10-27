@@ -3,19 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт со с\чётчиком</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Артём - QA Тестировщик</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Привет, GitHub! Я научился коммитить!</h1>
-        <p id="counter">0</p>
-        <div class="buttons">
-            <button id="increment">+1</button>
-            <button id="decrement">-1</button>
-            <button id="reset">Сбросить</button>
+    <!-- Хедер с навигацией -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#top" class="nav-link">Главная</a></li>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#skills" class="nav-link">Скиллы</a></li>
+                <li><a href="trainer.html" class="nav-link">Тренажер</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Хиро-блок -->
+        <section id="top" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Привет, меня зовут Артём</h1>
+                        <h2 class="hero-subtitle">QA Тестировщик</h2>
+                        <p class="hero-description">Обучался на курсах Яндекс.Практикум и QA Studio</p>
+                        <button class="btn-primary">Написать</button>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-placeholder">
+                            <span>Фото 400×400</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок "Обо мне" -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Обо мне</h2>
+                <div class="about-content">
+                    <p>Здесь будет подробная информация о вас, вашем опыте и образовании. Можно добавить несколько абзацев текста.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок "Скиллы" -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Postman</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Charles</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>DevTools</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Git</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>HTML/CSS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Figma</h3>
+                    </div>
+                    <div class="skill-card coming-soon">
+                        <h3>Скилл в подготовке</h3>
+                    </div>
+                    <div class="skill-card coming-soon">
+                        <h3>Скилл в подготовке</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок "Контакты" -->
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="section-title">Связь со мной</h2>
+                <div class="contacts-content">
+                    <div class="contact-methods">
+                        <div class="contact-tabs">
+                            <button class="contact-tab active" data-tab="email">Почта</button>
+                            <button class="contact-tab" data-tab="telegram">Telegram</button>
+                            <button class="contact-tab" data-tab="whatsapp">WhatsApp</button>
+                            <button class="contact-tab" data-tab="phone">Номер телефона</button>
+                        </div>
+                        <div class="contact-content">
+                            <div class="contact-panel active" id="email-panel">
+                                <div class="contact-info">
+                                    <p>example@email.com</p>
+                                    <div class="contact-image">
+                                        <div class="image-placeholder small">
+                                            <span>Email иконка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Остальные панели будут скрыты по умолчанию -->
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Напишите мне</h3>
+                        <p class="form-description">Если у вас остались вопросы или есть желание сотрудничать со мной, оставьте свой email и я свяжусь с вами</p>
+                        <form id="feedback-form">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Ваш email" required maxlength="64">
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+                            <button type="submit" class="btn-primary">Отправить</button>
+                        </form>
+                        <div class="form-message" id="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <a href="#top">Главная</a>
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Скиллы</a>
+                    <a href="trainer.html">Тренажер</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Артём. Все права защищены.</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contacts.js"></script>
 </body>
 </html>
